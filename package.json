@@ -1,0 +1,24 @@
+{
+  "name": "finddanger",
+  "version": "1.0.0",
+  "description": "yosef shapira\r 315545491\r galil",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yossishapira/week_8_find_danger.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/yossishapira/week_8_find_danger/issues"
+  },
+  "homepage": "https://github.com/yossishapira/week_8_find_danger#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
