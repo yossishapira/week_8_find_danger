@@ -1,4 +1,4 @@
-import { before } from "node:test";
+
 import { Menu } from "./claient/claient.js"; 
 import { GetPeopleList, GetCallRecords, SearchPeoplebyName, SearchPeoplebyAge,FindingHazard } from "./utils/utils.js";
 
@@ -23,3 +23,4 @@ let menu = Menu()
 
     }
 
+await FindingHazard()

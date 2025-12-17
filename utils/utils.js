@@ -52,9 +52,20 @@ export async function GetCallRecords() {
     }
 }
 
-export function ReadJsonFile() {
+export function ReadJsonFile_People() {
     const p = new Promise((resolve, reject) => {
         fs.readFile("PEOPLE.json", "utf8", (err, data) => {
+            resolve(data)
+            reject(err)
+        }
+        )
+    })
+    return p
+}
+
+export function ReadJsonFile_content() {
+    const p = new Promise((resolve, reject) => {
+        fs.readFile("TRANSCRIPTIONS.json", "utf8", (err, data) => {
             resolve(data)
             reject(err)
         }
@@ -90,10 +101,11 @@ export async function SearchPeoplebyAge() {
 }
 
 export async function FindingHazard() {
-    const Objects = await ReadJsonFile()
+    const Objects = await ReadJsonFile_content()
     const DangerousCalls = JSON.parse(Objects)
     let Listofdangerous = []
     for (let i = 0; i < DangerousCalls.length; i++) {
+        console.log(DangerousCalls[i])
         DangerousCalls[i].content.forEach(circumcision => {
             if(circumcision === "death" || circumcision === "knife" || circumcision === "bomb" || circumcision === "attack"){
                 Listofdangerous.push(DangerousCalls[i])
@@ -105,5 +117,5 @@ export async function FindingHazard() {
                 }
             }
         })
-        console.log(Listofdangerous)  
+    return Listofdangerous 
 }}
